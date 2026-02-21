@@ -44,6 +44,10 @@ impl FromStr for Person {
     fn from_str(s: &str) -> Result<Self, Self::Err> {
         let mut split = s.split(',');
 
+        if split.clone().count() != 2 {
+            return Err(ParsePersonError::BadLen);
+        }
+
         let name = split
             .next()
             .ok_or(ParsePersonError::BadLen)?

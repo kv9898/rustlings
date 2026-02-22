@@ -57,6 +57,7 @@ errors2
 errors3
 errors4
 errors5
+errors6
 generics1
 generics2
 traits1
